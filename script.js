@@ -438,3 +438,21 @@ window.addEventListener('scroll', debouncedScroll);
 
 console.log('%c👋 Привет, диджей!', 'font-size: 20px; color: #00f3ff; font-weight: bold;');
 console.log('%cЗаинтересован в обучении? Записывайся на сайте! 🎧', 'font-size: 14px; color: #ff00ff;');
+
+// Cookie Consent Banner
+const cookieConsent = document.getElementById('cookieConsent');
+const acceptCookiesBtn = document.getElementById('acceptCookies');
+
+// Check if user has already accepted cookies
+if (!localStorage.getItem('cookiesAccepted')) {
+    // Show banner after 1 second
+    setTimeout(() => {
+        cookieConsent.classList.add('show');
+    }, 1000);
+}
+
+// Handle accept button click
+acceptCookiesBtn.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookieConsent.classList.remove('show');
+});
