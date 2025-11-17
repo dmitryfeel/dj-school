@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://xn----htbaeekk3o.xn--p1ai/sitemap.xml
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 0.5
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.5
